@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* The word "toggle" means turn on/off. */
+      .toggle-button, .toggle-button2, .toggle-button3{
+        background-color: rgb(230, 230, 230);
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-right: 10px;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .is-toggled, .is-toggled2, .is-toggled3{
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="toggle-button js-button" onclick="forButton()">Gaming</button>
+
+      <button class="toggle-button2 js-button2" onclick="forButton2()">Music</button>
+
+      <button class="toggle-button3 js-button3" onclick="forButton3()">Tech</button>
+
+      <script>
+        function forButton() {
+          const button = document.querySelector('.js-button')
+          if (button.classList.contains('is-toggled')) {
+            button.classList.remove('is-toggled')
+          } else if (button2.classList.contains('is-toggled2')) {
+            button2.classList.remove('is-toggled2')
+          } else if (button3.classList.contains('is-toggled3')) {
+            button3.classList.remove('is-toggled3')
+          }
+          else {
+            button.classList.add('is-toggled')
+          }
+        }
+
+        function forButton2() {
+          const button2 = document.querySelector('.js-button2')
+          if (button2.classList.contains('is-toggled2')) {
+            button2.classList.remove('is-toggled2');
+          }
+          else {
+            button2.classList.add('is-toggled2');
+          }
+        }
+
+        function forButton3() {
+          const button3 = document.querySelector('.js-button3') 
+
+          if (button3.classList.contains('is-toggled3')) {
+            button3.classList.remove('is-toggled3')
+          } else {
+            button3.classList.add('is-toggled3')
+          }
+        }
+      </script>
+  </body>
+</html>
