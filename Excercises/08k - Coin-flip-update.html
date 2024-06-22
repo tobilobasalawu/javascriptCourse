@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Coin Flip Game update</title>
+  </head>
+
+  <body>
+
+    <button onclick="
+        playGame('heads')
+      ">
+      heads
+    </button>
+
+    <button onclick="
+      playGame('tails')
+    ">
+      tails
+    </button>
+
+    <button onclick="clearGame()"
+    >Clear</button>
+
+    <script>
+
+      //let heads = 'heads';
+
+      let score = JSON.parse(localStorage.getItem('score')) ||{ 
+        wins: 0,
+        losses: 0
+      }  
+
+      function clearGame() {
+        score.wins = 0;
+        score.losses = 0;
+
+        localStorage.removeItem('score');
+      }
+
+      function playGame(guess) {
+        const randomNum = Math.random();
+        const result = randomNum < 0.5 ? 'heads' : 'tails';
+        localStorage.setItem('score',JSON.stringify(score));
+
+
+        if (result === 'heads' && guess === 'heads') 
+        {
+          score.wins += 1;
+          console.log(`Heads, You Win!
+Wins : ${score.wins}, Losses: ${score.losses}`)
+        } 
+
+        else if (result === 'heads' && guess === 'tails') 
+        {
+          score.losses += 1;
+          console.log(`Heads, You Lose!
+Wins : ${score.wins}, Losses: ${score.losses}`)
+        
+        }
+
+        else if (result === 'tails' && guess === 'heads') {
+
+          score.losses += 1;
+          console.log(`Tails, You Lose!
+Wins : ${score.wins}, Losses: ${score.losses}`)
+        }
+
+        else if (result === 'tails' && guess === 'tails') 
+        {
+          score.wins += 1;
+          console.log(`Tails, You Win!
+Wins : ${score.wins}, Losses: ${score.losses}`)
+        }      
+      }
+    </script>
+    
+  </body>
+
+</html>
