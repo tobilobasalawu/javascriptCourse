@@ -8,5 +8,5 @@ function addTodo() {
   todoList.push(name);
   console.log(todoList);
 
-  inputElement.value == '';
+  inputElement.value = '';
 }
