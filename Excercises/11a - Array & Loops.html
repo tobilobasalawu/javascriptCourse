@@ -7,6 +7,7 @@
   <body>
 
     <script>
+      /*
       let nums = [10,20,30];
 
       nums[2] = 99;
@@ -20,6 +21,23 @@
       }
 
       console.log(getLastValue([1, 20, 22, 24, 0]))
+      */
+    
+      function arraySwap(array) {
+        let firstV = array[0]
+        let arrayLength = array.length - 1
+        let lastv = array[arrayLength]
+
+        array[arrayLength] = firstV 
+        array[0] = lastv
+
+        return array;
+        
+      }
+
+      console.log(arraySwap([1,2,3]));
+      
+     
     </script>
     
   </body>
