@@ -5,18 +5,15 @@
     <script src="/scripts/11-todo-list.js"></script>
   </head>
 
-  <body>
+  <body
     <p>Todo List Practice 1</p>
-    <input class="js-name-input" type="text" placeholder="Todo name">
-    <button onclick="
-      addTodo()
-    ">Add</button>
+    <input class="js-name-input" onkeydown="
+      handleKeyDown(event);" type="text" placeholder="Todo name">
+    <button onclick="addTodo()"
+    >Add</button>
 
-    <p>Todo List Practice 2</p>
-    <input type="text" placeholder="Todo name">
-    <button onclick="
-    ">Add</button>
-    <p class="js-input-result"></p>
+    <div class="js-todo-list"></div>
+    
   </body>
 
 </html>
