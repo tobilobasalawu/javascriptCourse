@@ -7,9 +7,28 @@
   <body>
 
     <script>
-      for (let i = 5; i >= 0; i++) {
+      //for (let i = 5; i >= 0; i++) {
+      //  console.log(i)
+      //}
+
+      /*
+      let i = 0
+
+      while (i >= 0) {
+        i += 2
         console.log(i)
       }
+      */
+      function addOne(array) {
+        const result = [];
+
+        for (let i = 0; i < array.length; i += 1) {
+          result.push(array[i] + 1);
+        }
+        return result;
+      }
+
+      console.log(addOne([1,2,3]))
     </script>
     
   </body>
