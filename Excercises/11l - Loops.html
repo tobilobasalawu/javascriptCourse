@@ -18,7 +18,7 @@
             result.min = nums[i];
           } else if (nums[i] > 0) {
             result.max = nums[i];
-          }
+          }  
         }
 
         return result;
@@ -47,6 +47,25 @@
       }
 
       console.log(mM([23]));
+
+      function countWords(words) {
+        let fruitCount = {
+          apple : 0,
+          grape : 0
+        }
+        
+        for (let i = 0; i < words.length; i++) {
+          if (words[i] === 'apple') {
+            fruitCount.apple += 1;
+          } else if (words[i] === 'grape') {
+            fruitCount.grape += 1;
+          }
+        }
+
+        return fruitCount;
+      }
+
+      console.log(countWords(['grape','grape', 'apple','apple']));
     </script>
     
   </body>
