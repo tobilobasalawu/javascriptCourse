@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Advanced Functions/title>
+    <title>Advanced Functions</title>
     
   </head>
 
   <body>
 
     <script>
+      /*
+      function greeting() {
+        console.log('hello');
+      }
 
+      greeting();
+
+      const num = 2;
+      
+      const function1 = function() {
+        console.log('hello 2');
+      }
+
+      console.log(typeof function1);
+      function1();
+      // the above is called an anonymous function 
+
+      const object1 = {
+        num : 2,
+        fun: function() {
+          console.log('hello this is a function in a object')
+        }
+      }
+
+      object1.fun();
+
+      function display(param) {
+        console.log(param);
+      }
+
+      display(2);
+
+      function run(param) {
+        param();
+      }
+      run(function() {
+        console.log('hello is a function in another function parameter')
+      }) 
+        // the above is called a function in another function parameter
+       */
+      
+       setTimeout(function() {
+        console.log('timeout')
+       }, 3000);
+
+       console.log('next line'); // a asynchronous code wont allow the setTimeout to run first before the next line 
+
+       // a synchronous code will allow one line to finish before going to the next line
     </script>
 
   </body>
