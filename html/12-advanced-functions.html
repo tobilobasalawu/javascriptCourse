@@ -50,12 +50,19 @@
        */
       
        setTimeout(function() {
-        console.log('timeout')
+        console.log('timeout');
+        console.log('timeout 2')
        }, 3000);
 
        console.log('next line'); // a asynchronous code wont allow the setTimeout to run first before the next line 
 
        // a synchronous code will allow one line to finish before going to the next line
+
+       setInterval(function() {
+        console.log('Interval')
+       }, 3000);
+
+       console.log('next line 2');
     </script>
 
   </body>
