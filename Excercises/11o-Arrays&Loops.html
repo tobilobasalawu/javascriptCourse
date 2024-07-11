@@ -47,7 +47,7 @@
       }
 
       console.log(findIndex(['green', 'red', 'blue', 'red'],'red'))
-      */
+
 
       function removeEgg(foods) {
         let result = [];
@@ -77,10 +77,12 @@
 
       console.log(removeEgg(['egg','apple','egg','ham','egg']))
 
+       */
       function removeEgg(foods) {
         let result = [];
         let eggsremoved = 0;
-        const revf = foods.reverse();
+        const foodsCopy = foods.slice();
+        const revf = foodsCopy.reverse();
 
         for (let i = 0; i < revf.length; i++) {
           if (revf[i] === 'egg' && eggsremoved < 2) {
@@ -88,10 +90,11 @@
             continue;
           } result.push(revf[i]);
         }
+        console.log(foods);
         return result.reverse();
       }
 
-      console.log(removeEgg(['egg','apple','egg','ham','egg']))
+      console.log(removeEgg(['egg','apple','egg','egg','ham']))
     </script>
     
   </body>
