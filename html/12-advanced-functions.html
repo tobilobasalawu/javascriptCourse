@@ -2,11 +2,9 @@
 <html>
   <head>
     <title>Advanced Functions</title>
-    
   </head>
 
   <body>
-
     <script>
       /*
       function greeting() {
@@ -47,7 +45,7 @@
         console.log('hello is a function in another function parameter')
       }) 
         // the above is called a function in another function parameter
-       */
+
       
        setTimeout(function() {
         console.log('timeout');
@@ -63,8 +61,16 @@
        }, 3000);
 
        console.log('next line 2');
+        */
+
+      [
+        'make dinner',
+        'wash dishes',
+        'watch youtube'
+      ].forEach(function(value, index) {
+        console.log(index);
+        console.log(value);
+      });
     </script>
-
   </body>
-
 </html>
