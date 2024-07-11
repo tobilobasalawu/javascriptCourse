@@ -1,4 +1,4 @@
-const todoList = [{
+const todoList =  [{
   name : 'make dinner',
   dueDate: '2022-12-22'
 }, {
@@ -9,6 +9,7 @@ const todoList = [{
 
 function renderTodoList() {
   let todoListHTML = '';
+
 
   for (let i = 0; i < todoList.length; i++) {
     const todoObject = todoList[i];
@@ -57,11 +58,14 @@ function addTodo() {
   inputElement.value = '';
 
   renderTodoList()
+
+  
 }
 
 function handleKeyDown(event) {
   if (event.key === 'Enter')
     {addTodo()}
 }
+
 
 
