@@ -1,8 +1,9 @@
-body{
+body {
   font-family: Arial;
 }
 
-.todo-grid, .to-input-grid{
+.todo-grid,
+.to-input-grid {
   display: grid;
   grid-template-columns: 200px 150px 100px;
   column-gap: 10px;
@@ -10,17 +11,18 @@ body{
   align-items: center;
 }
 
-.to-input-grid{
+.to-input-grid {
   margin-bottom: 10px;
   align-items: stretch;
 }
 
-.name-input, .due-date-input{
+.name-input,
+.due-date-input {
   font-size: 15px;
   padding: 6px;
 }
 
-.add-button{
+.add-button {
   background-color: green;
   border: none;
   color: white;
@@ -28,7 +30,7 @@ body{
   cursor: pointer;
 }
 
-.delete-button{
+.delete-button {
   background-color: darkred;
   border: none;
   color: white;
@@ -37,3 +39,4 @@ body{
   cursor: pointer;
   padding: 10px 0px 10px 0px;
 }
+
