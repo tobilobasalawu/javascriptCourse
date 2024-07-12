@@ -7,29 +7,41 @@
   <body>
 
     <script>
-      /*
+      
       setInterval(function() {
         document.title = 'App';
       }, 1000)
-      */
+      
 
       let messages = 2;
-      setInterval(function() {
-        document.title = `(${messages}) New messages`
+      setInterval(function() 
+      {
+        if (messages === 0) {
+          document.title = 'App';
+        } 
+        else {
+            document.title = `(${messages}) New messages`
+        }
       }, 1000)
     </script>
 
     <button onclick="
-      messages+=1
-      setInterval(function() {
-        document.title = `(${messages}) New messages`
-      }, 1000)
-    ">Add</button>
+      if (messages >= 0) {
+        //document.title = 'App';
+        messages++
+        setInterval(function() {
+          document.title = `(${messages}) New messages`
+        }, 1000)
+      }
+
+    ">Add</button> 
     <button onclick="
-      messages--
-      setInterval(function() {
-        document.title = `(${messages}) New messages`
-      }, 1000)
+      if (messages > 0) {
+        messages--
+        setInterval(function() {
+          document.title = `(${messages}) New messages`
+        }, 1000)
+      }
     ">Remove</button>
   </body>
 </html>
