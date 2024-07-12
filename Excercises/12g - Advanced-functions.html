@@ -7,10 +7,29 @@
   <body>
 
     <script>
+      /*
       setInterval(function() {
         document.title = 'App';
       }, 1000)
+      */
+
+      let messages = 2;
+      setInterval(function() {
+        document.title = `(${messages}) New messages`
+      }, 1000)
     </script>
 
+    <button onclick="
+      messages+=1
+      setInterval(function() {
+        document.title = `(${messages}) New messages`
+      }, 1000)
+    ">Add</button>
+    <button onclick="
+      messages--
+      setInterval(function() {
+        document.title = `(${messages}) New messages`
+      }, 1000)
+    ">Remove</button>
   </body>
 </html>
