@@ -37,6 +37,21 @@
       }
 
       removeEggs(['egg', 'apple', 'egg', 'egg', 'ham']);
+
+      
+      function removeEggs(foods){
+        let eggremoved = 0 
+        console.log(foods.filter((value, index) => {
+          if (value === 'egg' && eggremoved < 2) {
+            eggremoved++;
+            return false;
+          } else {
+            return true;
+          }
+        }))
+      }
+
+      removeEggs(['egg', 'apple', 'egg', 'egg', 'ham']);
     </script>
     
   </body>
