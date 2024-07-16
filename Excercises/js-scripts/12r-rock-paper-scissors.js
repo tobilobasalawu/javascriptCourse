@@ -17,10 +17,13 @@ function autoPlay() {
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
-
+    document.querySelector('.auto-play-button').innerHTML = 'Stop Playing';
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
+
+    document.querySelector('.auto-play-button')
+      .innerHTML = 'Auto Play';
   }
 }
 
@@ -34,7 +37,7 @@ document.body.addEventListener('keydown', (event) => {
   }
 })
 
-document.querySelector('.js-rock-button')
+  document.querySelector('.js-rock-button')
   .addEventListener('click', () => {
     playGame('rock');
   })
@@ -49,10 +52,12 @@ document.querySelector('.js-rock-button')
     playGame('scissors');
   })
 
-  document.querySelector('.auto-play-button')
-  .addEventListener('click', () => {
+  let autoPlayButton = document.querySelector('.auto-play-button');
+  autoPlayButton.addEventListener('click', () => {
     autoPlay();
-  })
+  }
+);
+
 
  function playGame(playerMove) {
   const computerMove = pickComputerMove();
