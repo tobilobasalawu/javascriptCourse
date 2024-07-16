@@ -52,11 +52,34 @@ document.body.addEventListener('keydown', (event) => {
     playGame('scissors');
   })
 
+  document.querySelector('.reset-score-button')
+    .addEventListener('click', () => {
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement()
+    })
+
   let autoPlayButton = document.querySelector('.auto-play-button');
   autoPlayButton.addEventListener('click', () => {
     autoPlay();
-  }
-);
+  });
+  document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'a'){
+      autoPlay();
+    }
+  });
+
+  document.body.addEventListener('keydown', (event) => {
+    if (event.key = 'Backspace') {
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement()
+    }
+  })
 
 
  function playGame(playerMove) {
