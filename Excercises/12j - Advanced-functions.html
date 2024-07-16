@@ -29,6 +29,14 @@
       }
 
       addNum([1, 2, 3], 2);
+
+      function removeEggs(foods){
+        console.log(foods.filter((value, index) => {
+          return value === 'egg' ? false : true;
+        }))
+      }
+
+      removeEggs(['egg', 'apple', 'egg', 'egg', 'ham']);
     </script>
     
   </body>
