@@ -33,17 +33,17 @@
        document.querySelector('#start-button').innerHTML = 'Loading!'
     },1000)">Start</button>
 
-    <button id="start2-button" onclick="setTimeout(function() {
+    <button id="start2-button" onclick="setTimeout(()=> {
       document.querySelector('#start2-button').innerHTML = 'Loading!'
-    },setTimeout(function() {
+    },setTimeout(() => {
       document.querySelector('#start2-button').innerHTML = 'Finsihed!'
     },1000))">Start</button>
 
     <br>
 
     <button id="start3-button" onclick="
-      setTimeout(function () {document.querySelector('.result-text')
-      .innerHTML = 'Added'}, setTimeout(function () {
+      setTimeout(() => {document.querySelector('.result-text')
+      .innerHTML = 'Added'}, setTimeout(() => {
         document.querySelector('.result-text')
       .innerHTML = '';
       },2000))
