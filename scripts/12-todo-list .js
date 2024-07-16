@@ -38,8 +38,8 @@ document.querySelectorAll('.js-delete-todo-button')
         todoList.splice(index, 1);
         renderTodoList()
       })
-    }
-  );
+    });
+
 
 
 }
