@@ -73,12 +73,46 @@ document.body.addEventListener('keydown', (event) => {
 
   document.body.addEventListener('keydown', (event) => {
     if (event.key = 'Backspace') {
-      score.wins = 0;
-      score.losses = 0;
-      score.ties = 0;
-      localStorage.removeItem('score');
-      updateScoreElement()
+      document.getElementById('confirmation-message')
+      .innerHTML = `
+        <div style="margin-top: 10px">
+          Are you sure you want to reset the Score?
+           <button id="yes-button" style="
+            height : 35px;
+            width : 55px;
+            padding: 5px;
+            font-size: 15px;
+            border: none;
+            margin: 0px 10px 0px 10px;
+           ">Yes</button>
+           <button id="no-button" style="
+            height : 35px;
+            width : 55px;
+            padding: 5px;
+            font-size: 15px;
+            border: none;
+           ">No</button>
+        </div>
+      ` 
+      document.querySelector('#yes-button')
+        .addEventListener('click', () => {
+          score.wins = 0;
+          score.losses = 0;
+          score.ties = 0;
+          localStorage.removeItem('score');
+          updateScoreElement();
+
+          document.getElementById('confirmation-message')
+            .innerHTML = '';
+        })
+
+      document.getElementById('no-button')
+        .addEventListener('click', () => {
+          document.getElementById('confirmation-message')
+            .innerHTML = '';
+        })
     }
+   
   })
 
 
