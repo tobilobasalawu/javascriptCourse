@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects Excercise</title>
+  </head>
+
+  <body>
+
+    <script>   
+      
+      const product1 = {
+        name : 'ball',
+        price : 3000
+      }
+
+      const product2 = {
+          name : 'ball',
+          price : 3000
+        }
+
+      function isSameProduct(product1,product2) {
+
+        return (product1.name === product2.name && product1.price === product2.price ? true : false)
+      }
+
+      console.log(isSameProduct(product1,product2));
+      
+      /*
+      console.log(comparePrice(product1,product2))
+ 
+      console.log(product1);
+      console.log(product1.price + 500);
+
+      product1['delivery-time'] = '3 days';
+      console.log(product1);
+      */
+    </script>
+    
+  </body>
+</html>

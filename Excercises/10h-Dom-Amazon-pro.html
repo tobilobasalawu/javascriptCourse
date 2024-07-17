@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Amazon shipping Calculator update</title>
+    <style>
+      body{
+        font-family: Arial;
+        font-size: 16px;
+      }
+
+      input{
+        padding: 10px 10px 10px 10px;
+      }
+
+      input::placeholder{
+        font-size: 14px;
+      }
+
+      .calculate-button{
+        background-color: green;
+        padding: 12px 15px 12px 15px;
+        color: white;
+        border: none;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 Shipping</p>
+    <p>Orders under $40 = FREE Shipping</p>
+    <input onkeydown="handleCostKeydown(event)" class="js-cost" placeholder="Cost of Order" type="text">
+    <button onclick="calculateShipping()" class="calculate-button">Calculate</button>
+    <p class="js-calculate"></p>
+
+    <script>
+
+       function handleCostKeydown(event) {
+        if (event.key==='Enter') {
+          calculateShipping()
+        }
+       }
+       
+      function calculateShipping () {
+        let costIT = Number(document.querySelector('.js-cost').value);
+
+        if (costIT > 0 && costIT <= 40  ) {
+          costIT += 10;
+          document.querySelector('.js-calculate')
+            .innerHTML = `$${costIT}`;
+        } else if (costIT >= 40) {
+          document.querySelector('.js-calculate')
+            .innerHTML = 'FREE shipping';
+        } else if (costIT < 0) {
+          document.querySelector('.js-calculate')
+          .innerHTML = 'Error: cost cannot be less than $0';
+        }
+      
+      }
+
+
+    </script>   
+  </body>
+</html>

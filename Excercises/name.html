@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Name Game</title>
+  </head>
+  <body>
+    <p>
+      Name: <input type="text" id="nameInput">
+    </p>
+
+    <button onclick="generateName()">Generate Name</button>
+    
+    <script>
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        win: 0,
+        loss: 0
+      };
+
+      function generateName() {
+        // Removed firstName as it is unused
+        let randomNum = Math.random();
+        let choice = (randomNum > 0.4 && randomNum < 0.6) ? 'Tobi' : 'AJ';
+
+        if (choice === 'Tobi') {
+          score.win += 1;
+          console.log(`${choice} - Win: ${score.win} Loss: ${score.loss}`);
+        } else if (choice === 'AJ') {
+          score.loss += 1;
+          console.log(`${choice} - Win: ${score.win} Loss: ${score.loss}`);
+        }
+
+        nameInput.value = choice;
+        localStorage.setItem('score', JSON.stringify(score));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arrays & Loops Excercise</title>
+  </head>
+
+  <body>
+
+    <script>
+      let nums = [10, 20, 30];
+      nums[2] = 99;
+      console.log(nums);
+
+      function getLastValue(array) {
+        let y = array.length - 1;
+        return array[y];
+      }
+
+      console.log(getLastValue(['hi', 'hello', 'yews']));
+
+      function arraySwap(array) {
+        const z = array.length - 1
+        const x = array[z];
+        const y = array[0];
+        array[0] = x;
+        array[z] = y;
+        return array;
+      }
+      console.log(arraySwap(['hi', 'hello', 'yes']));
+
+    </script>
+    
+  </body>
+  
+</html>

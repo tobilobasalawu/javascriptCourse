@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+    <style>
+      #start-button, #start2-button{
+        background-color: darkred;
+        border: none;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        width: 80px;
+        cursor: pointer;
+      }
+
+      #start-button{
+        margin-bottom: 20px;
+      }
+
+      #start3-button{
+        background-color: darkred;
+        border: none;
+        color: white;
+        padding: 5px 10px 5px 10px;
+        width: 100px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <button id="start-button" onclick="">Start</button>
+
+    <button id="start2-button" onclick="">Start</button>
+
+    <br>
+
+    <button id="start3-button">Add to cart</button>
+    <p class="result-text"></p>
+
+
+
+    <script>
+      /*
+        const add = function() {
+          console.log(2 + 3);
+        }
+
+        add();
+        add();
+
+        function runTwice(fun) {
+          fun();
+        }
+
+        runTwice(function() {
+          console.log('12b');
+          console.log('12b');
+        })
+
+      */
+
+      document.getElementById('start-button')
+        .addEventListener('click', () => {
+          setTimeout(() => {
+          document.querySelector('#start-button').innerHTML = 'Finished!'
+        },1000)
+        })
+
+      document.getElementById('start2-button')
+        .addEventListener('click', () => {
+          setTimeout(()=> {
+          document.querySelector('#start2-button').innerHTML = 'Loading!'
+        },setTimeout(() => {
+          document.querySelector('#start2-button').innerHTML = 'Finsihed!'
+        },1000))
+        } )
+
+      document.getElementById('start3-button')
+        .addEventListener('click', () => {
+          setTimeout(() => {document.querySelector('.result-text')
+          .innerHTML = 'Added'}, setTimeout(() => {
+            document.querySelector('.result-text')
+          .innerHTML = '';
+          },2000))
+        } )
+    
+    </script>
+    
+  </body>
+</html>

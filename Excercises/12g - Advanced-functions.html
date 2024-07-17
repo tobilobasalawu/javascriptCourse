@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions 2</title>
+  </head>
+
+  <body>
+    <button id="add-button">Add</button> 
+    <button id="remove-button">Remove</button>
+
+      <script>
+        /*
+        setInterval(function() {
+          document.title = 'App';
+        }, 1000)
+        */
+
+        let messages = 2;
+        setInterval(() =>
+        {
+          if (messages === 0) {
+            document.title = 'App';
+          } 
+          else {
+              document.title = `(${messages}) New messages`
+          }
+        }, 1000)
+
+        document.getElementById('add-button')
+          .addEventListener('click', () => {
+            if (messages >= 0) {
+            //document.title = 'App';
+            messages++
+            setInterval(() => {
+              document.title = `(${messages}) New messages`
+            }, 1000)
+            }
+          })
+
+        document.getElementById('remove-button')
+          .addEventListener('click', () => {
+            if (messages > 0) {
+            messages--
+            setInterval(() => {
+              document.title = `(${messages}) New messages`
+            }, 1000)
+          } else if (messages === 0) {
+            setInterval(() => 
+            {document.title = 'App'}, 1000);
+          }})
+      </script>
+
+  </body>
+</html>

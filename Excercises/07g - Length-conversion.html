@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Length Conversion</title>
+  </head>
+
+  <body>
+
+    <script>
+      function convertLength(length, from, to) {
+        if (from === 'miles' && to === 'km') {
+          let conversion = length * 1.6
+          console.log(`${conversion} km`)
+        } else if (from === 'km' && to === 'miles') {
+          let conversion = length / 1.6
+          console.log(`${conversion} miles`)
+        } else if (from === to) {
+          console.log(`${length} ${to}`)
+        } else if (from === 'km' && to === 'ft' ) {
+          return console.log(`${length * 3281}ft`);
+        } else if (from === 'miles' && to === 'ft') {
+          return console.log(`${length * 5280} ft`)
+        } else if (from === 'ft' && to === 'km') {
+          return console.log(`${length / 3281} km `)
+        } else if (from === 'ft' && to === 'miles') {
+          return console.log(`${length / 5280} km `)
+        } else {
+          return console.log(`Invalid unit: ${from} to ${to}`)
+        }
+      }
+
+      convertLength(5,'ss','ft')
+    </script>
+    
+  </body>
+</html>

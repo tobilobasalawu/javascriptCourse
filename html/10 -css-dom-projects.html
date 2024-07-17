@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+    <script src="/scripts/10-cssDomprojects.js"> </script>  
+    <link rel="stylesheet" href="/styles/10-cssDOMprojects.css">
+  </head>
+
+  <body>
+    <p>YouTube Subcribe Button</p>
+    <button onclick=" subscribe();
+    " class="js-subscribe-button">
+      Subscribe
+    </button>
+
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 Shipping</p>
+    <p>Orders under $40 = FREE Shipping</p>
+    <input onkeydown="handleCostKeydown(event)" class="js-cost" placeholder="Cost of Order" type="text">
+    <button onclick="calculateShipping()" class="calculate-button">Calculate</button>
+    <p class="js-calculate"></p>
+
+     
+  </body>
+</html>

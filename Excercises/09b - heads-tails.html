@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Heads and Tails</title>
+  </head>
+
+  <body>
+
+    <button onclick="if (heads === 'heads') {
+      document.querySelector('.js-ht').innerHTML = `You chose: ${heads}`
+    }" class="js-heads">heads</button>
+    <button onclick=" if (tails === 'tails'){
+      document.querySelector('.js-ht').innerHTML = `You chose: ${tails}`
+    }" class="js-tails">tails</button>
+    <p class="js-ht"></p>
+
+    <br><br>
+
+    <input onkeydown="onkeydownPress(event)" class="js-input" type="text"> 
+    <button onclick="output()">Submit</button>
+    <p class="js-submit-output"></p>
+
+    <br><br>
+
+    <input onkeyup="document.querySelector('.js-text').innerHTML = document.querySelector('.input-text').value;" type="text" class="input-text">
+    <p class="js-text"></p>
+
+    <script>
+      const heads = document.querySelector('.js-heads').innerHTML;
+      const tails = document.querySelector('.js-tails').innerHTML;
+
+
+      function output() {
+        let jsinput = document.querySelector('.js-input').value;
+        document.querySelector('.js-submit-output').innerHTML = `Your name is :${jsinput}`; 
+      }
+      
+
+      function onkeydownPress(event) {
+
+        if (event.key === 'Enter') {
+          output()
+        }
+      }
+
+
+    </script>
+    
+  </body>
+</html>
